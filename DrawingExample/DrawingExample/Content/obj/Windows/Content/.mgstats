@@ -1,0 +1,5 @@
+Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"C:/Users/Paul/Desktop/DrawingExample/DrawingExample/Content/Enterprise.png","C:/Users/Paul/Desktop/DrawingExample/DrawingExample/Content/bin/Windows/Content/Enterprise.xnb","TextureProcessor","Texture2DContent",28129,160085,1.660173
+"C:/Users/Paul/Desktop/DrawingExample/DrawingExample/Content/MFalcon.png","C:/Users/Paul/Desktop/DrawingExample/DrawingExample/Content/bin/Windows/Content/MFalcon.xnb","TextureProcessor","Texture2DContent",663220,1837165,0.1456107
+"C:/Users/Paul/Desktop/DrawingExample/DrawingExample/Content/Tie.png","C:/Users/Paul/Desktop/DrawingExample/DrawingExample/Content/bin/Windows/Content/Tie.xnb","TextureProcessor","Texture2DContent",22898,160085,0.0318865
+"C:/Users/Paul/Desktop/DrawingExample/DrawingExample/Content/TieAdvanced.png","C:/Users/Paul/Desktop/DrawingExample/DrawingExample/Content/bin/Windows/Content/TieAdvanced.xnb","TextureProcessor","Texture2DContent",25690,160085,0.0319393
