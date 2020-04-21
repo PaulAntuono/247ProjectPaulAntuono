@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>D:/GIT/AGGP247_WorkSpace/DrawingExample/DrawingExample/DrawingExample/Content/TieAdvanced.png</SourceFile>
-  <SourceTime>2019-01-15T17:38:14.5891562-05:00</SourceTime>
-  <DestFile>D:/GIT/AGGP247_WorkSpace/DrawingExample/DrawingExample/DrawingExample/Content/bin/Windows/Content/TieAdvanced.xnb</DestFile>
-  <DestTime>2019-02-02T19:34:20.5928045-05:00</DestTime>
+  <SourceFile>D:/GIT/247ProjectPaulAntuono/DrawingExample/DrawingExample/DrawingExample/Content/TieAdvanced.png</SourceFile>
+  <SourceTime>2020-04-20T20:49:26.2211895-04:00</SourceTime>
+  <DestFile>D:/GIT/247ProjectPaulAntuono/DrawingExample/DrawingExample/DrawingExample/Content/bin/Windows/Content/TieAdvanced.xnb</DestFile>
+  <DestTime>2020-04-20T21:11:57.7036889-04:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2018-09-23T17:55:52-04:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

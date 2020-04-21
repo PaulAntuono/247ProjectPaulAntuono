@@ -4,10 +4,10 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>D:/GIT/AGGP247_WorkSpace/DrawingExample/DrawingExample/DrawingExample/Content/Enterprise.png</File>
-    <File>D:/GIT/AGGP247_WorkSpace/DrawingExample/DrawingExample/DrawingExample/Content/MFalcon.png</File>
-    <File>D:/GIT/AGGP247_WorkSpace/DrawingExample/DrawingExample/DrawingExample/Content/Tie.png</File>
-    <File>D:/GIT/AGGP247_WorkSpace/DrawingExample/DrawingExample/DrawingExample/Content/TieAdvanced.png</File>
+    <File>D:/GIT/247ProjectPaulAntuono/DrawingExample/DrawingExample/DrawingExample/Content/Enterprise.png</File>
+    <File>D:/GIT/247ProjectPaulAntuono/DrawingExample/DrawingExample/DrawingExample/Content/MFalcon.png</File>
+    <File>D:/GIT/247ProjectPaulAntuono/DrawingExample/DrawingExample/DrawingExample/Content/Tie.png</File>
+    <File>D:/GIT/247ProjectPaulAntuono/DrawingExample/DrawingExample/DrawingExample/Content/TieAdvanced.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />

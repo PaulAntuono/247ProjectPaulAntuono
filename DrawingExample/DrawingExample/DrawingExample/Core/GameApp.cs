@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using LineDraw; 
+using LineDraw;
 
 namespace DrawingExample
 {
@@ -29,19 +29,25 @@ namespace DrawingExample
         /// <summary>
         /// Max number of Game Pads to look for
         /// </summary>
-        protected int MaxGamePads= 4; 
+        protected int MaxGamePads = 4;
 
         /// <summary>
         /// Color to Clear the Screen With
         /// </summary>
-        public Color clearColor = Color.Black; 
+        public Color clearColor = Color.Black;
+
+        public List<BaseGameObject> InGameList;
+        public List<BaseGameObject> DestroyObjectList;
 
         public GameApp()
         {
-            instance = this; 
+            instance = this;
             graphics = new GraphicsDeviceManager(this);
-            
+
             Content.RootDirectory = "Content";
+
+            InGameList = new List<BaseGameObject>();
+            DestroyObjectList = new List<BaseGameObject>();
         }
 
         /// <summary>
@@ -63,7 +69,7 @@ namespace DrawingExample
             }
 
             // Initalizing the spritebatch for drawing
-            LineDrawer.InitateLineDrawer(GraphicsDevice); 
+            LineDrawer.InitateLineDrawer(GraphicsDevice);
             spriteBatch = new SpriteBatch(GraphicsDevice);
             base.Initialize();
         }
@@ -109,6 +115,26 @@ namespace DrawingExample
             // and then assign previous to the current after. 
             GameUpdate(gameTime);
 
+            // Update All Objects
+            if (InGameList.Count > 0)
+            {
+                foreach (BaseGameObject go in InGameList)
+                {
+                    go.ObjectUpdate(gameTime);
+                }
+            }
+
+            // Clean up objects that are for Destruction
+            if (DestroyObjectList.Count > 0)
+            {
+                foreach (BaseGameObject go in DestroyObjectList)
+                {
+                    InGameList.Remove(go);
+                }
+                DestroyObjectList.Clear();
+            }
+
+
             // Setting Current to Previous for next game tick
             keyboardPrevious = keyboardCurrent;
             mousePrevious = mouseCurrent;
@@ -123,6 +149,47 @@ namespace DrawingExample
 
         }
 
+        protected override void Draw(GameTime gameTime)
+        {
+            GraphicsDevice.Clear(clearColor);
+
+            spriteBatch.Begin();
+            BackGroundDraw(gameTime);
+
+            foreach (BaseGameObject Obj in InGameList)
+            {
+                Obj.ObjectDraw(spriteBatch);
+            }
+
+            GameDraw(gameTime);
+            HudDraw(gameTime);
+            spriteBatch.End();
+
+            base.Draw(gameTime);
+
+
+        }
+
+        protected virtual void GameDraw(GameTime gameTime)
+        {
+        }
+
+        protected virtual void BackGroundDraw(GameTime gameTime)
+        {
+        }
+
+        protected virtual void HudDraw(GameTime gameTime)
+        {
+        }
+
+        public void ClearScene()
+        {
+            foreach (BaseGameObject Obj in InGameList)
+            {
+                Obj.Destroy(false);
+            }
+        }
+
         //Utility Functions 
 
         /// <summary>
@@ -132,7 +199,7 @@ namespace DrawingExample
         /// <returns>bool</returns>
         public bool IsKeyPressed(Keys key)
         {
-            return (keyboardCurrent.IsKeyDown(key) && keyboardPrevious.IsKeyUp(key)); 
+            return (keyboardCurrent.IsKeyDown(key) && keyboardPrevious.IsKeyUp(key));
         }
 
         /// <summary>
