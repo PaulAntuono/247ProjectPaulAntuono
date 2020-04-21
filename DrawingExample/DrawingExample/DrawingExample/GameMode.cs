@@ -126,7 +126,7 @@ namespace DrawingExample
         {
             GraphicsDevice.Clear(clearColor);
 
-            spriteBatch.Begin();
+            
 
             //theGrid.Draw(spriteBatch);
 
@@ -170,7 +170,7 @@ namespace DrawingExample
 
             theGrid.Draw(spriteBatch);
 
-            spriteBatch.End();
+            
 
             base.Draw(gameTime);
         }
