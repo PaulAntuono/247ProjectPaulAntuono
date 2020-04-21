@@ -9,6 +9,8 @@ namespace DrawingExample
 {
     class GameMode : GameApp
     {
+        PlayerShip Player1;
+        SpriteFont font; 
 
         float offset = 0;
         //bool MouseShow = false;
@@ -36,6 +38,8 @@ namespace DrawingExample
         protected override void Initialize()
         {
             base.Initialize();
+
+            font = GameApp.instance.Content.Load<SpriteFont>("Font");
             // TODO: use this.Content to load your game content here
 
             // Setting up Screen Resolution
@@ -45,19 +49,8 @@ namespace DrawingExample
             graphics.IsFullScreen = false;
             graphics.ApplyChanges();
 
-            theline = new Line();
-            theline.width *= 3;
-            theline.color = Color.GreenYellow;
-            theline.startPoint = Vector2.Zero;
-            theline.endPoint = new Vector2(10, 10); 
-
-
-            theGrid = new Grid2D();
-            xMark = new XMark();
-            xMark.Location = new Vector2(3, 5); 
-            xMark.LineColorLocal(Color.Red);
-            xMark.LineWidthLocal(4f); 
-
+            Player1 = new PlayerShip();
+            Player1.Position = new Vector2(300, 300);
 
         }
 
@@ -96,25 +89,24 @@ namespace DrawingExample
             {
                 Exit();
             }
-
-            int deltaScrollWheel = mousePrevious.ScrollWheelValue - mouseCurrent.ScrollWheelValue; 
-            if (deltaScrollWheel != 0)
-            {
-                theGrid.GridSize += (Math.Abs(deltaScrollWheel) / deltaScrollWheel) * 2; 
-            }
            
-            if (IsKeyPressed(Keys.Q))
+            if (IsKeyHeld(Keys.W))
             {
-                theGrid.isDrawingLines = !theGrid.isDrawingLines; 
+                Player1.Thrust();
             }
-            if (IsKeyPressed(Keys.W))
+
+            if (IsKeyHeld(Keys.A))
             {
-                theGrid.isDrawingDivsions = !theGrid.isDrawingDivsions;
+                Player1.AddRotate(-1, gameTime);
             }
-            if (IsKeyPressed(Keys.E))
+
+            if (IsKeyHeld(Keys.D))
             {
-                theGrid.IsDrawingAxis = !theGrid.IsDrawingAxis;
+                Player1.AddRotate(1, gameTime);
             }
+
+
+
 
         }
 
@@ -124,54 +116,16 @@ namespace DrawingExample
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void GameDraw(GameTime gameTime)
         {
-          
-            
 
-            //theGrid.Draw(spriteBatch);
+            string message = "Rotation: " + Player1.Rotation.ToString();
+            string newmessage = "Velocity: " + Player1.Velocity.ToString();
 
+            spriteBatch.DrawString(font, message, new Vector2(200, 200), Color.Red);
 
-            // Draw the line as normal
-            //.color = Color.Red;
-            //theline.Draw(spriteBatch);
-
-            // Now Draw to grid size
-
-            theline.color = Color.LightBlue;
-            theGrid.DrawLine(spriteBatch, theline);
-
-            // Draw on Grid, but not scaled to grid Size
-
-           // theline.color = Color.LightBlue;
-           // theGrid.DrawLine(spriteBatch, theline);
-
-            // Draw a line object on screen
-            theGrid.DrawLineObject(spriteBatch, xMark);
-
-            LinePrimatives.DrawCircle(spriteBatch, 10f, Color.White, theGrid.Grid2ScreenPoint(Vector2.Zero, true), 10, 12);
-            LinePrimatives.DrawPoint(spriteBatch, 10f, Color.Blue, theGrid.Grid2ScreenPoint(new Vector2(3, 5), true));
-
-            LinePrimatives.DrawPoint(spriteBatch, theGrid.ScaleGrid2Screen(2), Color.Green, theGrid.Grid2ScreenPoint(new Vector2(-10, -10), true));
-
-            LinePrimatives.DrawCircle(spriteBatch, 3f, Color.White, theGrid.Grid2ScreenPoint(new Vector2 (-5, 5) , true), theGrid.ScaleGrid2Screen(2), 6);
-
-            LinePrimatives.DrawPoint(spriteBatch, 10f, Color.Green, theGrid.Grid2ScreenPoint(LinePrimatives.CircleRadiusPoint(new Vector2(-5, 5), 0, 2)));
-            LinePrimatives.DrawPoint(spriteBatch, 10f, Color.Green, theGrid.Grid2ScreenPoint(LinePrimatives.CircleRadiusPoint(new Vector2(-5, 5), 60, 2)));
-            LinePrimatives.DrawPoint(spriteBatch, 10f, Color.Green, theGrid.Grid2ScreenPoint(LinePrimatives.CircleRadiusPoint(new Vector2(-5, 5), 120, 2)));
-            LinePrimatives.DrawPoint(spriteBatch, 10f, Color.Green, theGrid.Grid2ScreenPoint(LinePrimatives.CircleRadiusPoint(new Vector2(-5, 5), 180, 2)));
-            LinePrimatives.DrawPoint(spriteBatch, 10f, Color.Green, theGrid.Grid2ScreenPoint(LinePrimatives.CircleRadiusPoint(new Vector2(-5, 5), 240, 2)));
-            LinePrimatives.DrawPoint(spriteBatch, 10f, Color.Green, theGrid.Grid2ScreenPoint(LinePrimatives.CircleRadiusPoint(new Vector2(-5, 5), 300, 2)));
-            //LinePrimatives.CircleRadiusPoint(theGrid.Grid2ScreenPoint(new Vector2(-5, 5), true), -60, 40); 
-
-            Vector2 Pos = LinePrimatives.CircleRadiusPoint(new Vector2(graphics.PreferredBackBufferWidth / 2f, graphics.PreferredBackBufferHeight / 2f), offset/120, theGrid.GridSize*7.5f);
-            LinePrimatives.DrawPoint(spriteBatch, theGrid.ScaleGrid2Screen(2), Color.Wheat, Pos);
-            
+            spriteBatch.DrawString(font, newmessage, new Vector2(200, 200), Color.Red);
 
 
-            theGrid.Draw(spriteBatch);
 
-            
-
-            
         }
     }
 }

@@ -31,7 +31,7 @@ namespace DrawingExample
 
         public BaseGameObject()
         {
-            GameApp.instance.InGameList.Add(this);
+            GameApp.instance.SceneList.Add(this);
 
             InitalizeObject();
         }

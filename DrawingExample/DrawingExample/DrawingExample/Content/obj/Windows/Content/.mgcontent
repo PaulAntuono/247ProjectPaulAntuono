@@ -4,12 +4,18 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>D:/GIT/247ProjectPaulAntuono/DrawingExample/DrawingExample/DrawingExample/Content/Enterprise.png</File>
-    <File>D:/GIT/247ProjectPaulAntuono/DrawingExample/DrawingExample/DrawingExample/Content/MFalcon.png</File>
-    <File>D:/GIT/247ProjectPaulAntuono/DrawingExample/DrawingExample/DrawingExample/Content/Tie.png</File>
-    <File>D:/GIT/247ProjectPaulAntuono/DrawingExample/DrawingExample/DrawingExample/Content/TieAdvanced.png</File>
+    <File>C:/Users/Paul/Documents/GitHub/247ProjectPaulAntuono/DrawingExample/DrawingExample/DrawingExample/Content/Enterprise.png</File>
+    <File>C:/Users/Paul/Documents/GitHub/247ProjectPaulAntuono/DrawingExample/DrawingExample/DrawingExample/Content/File.spritefont</File>
+    <File>C:/Users/Paul/Documents/GitHub/247ProjectPaulAntuono/DrawingExample/DrawingExample/DrawingExample/Content/MFalcon.png</File>
+    <File>C:/Users/Paul/Documents/GitHub/247ProjectPaulAntuono/DrawingExample/DrawingExample/DrawingExample/Content/spacemissilepng.png</File>
+    <File>C:/Users/Paul/Documents/GitHub/247ProjectPaulAntuono/DrawingExample/DrawingExample/DrawingExample/Content/spaceshippng.png</File>
+    <File>C:/Users/Paul/Documents/GitHub/247ProjectPaulAntuono/DrawingExample/DrawingExample/DrawingExample/Content/Tie.png</File>
+    <File>C:/Users/Paul/Documents/GitHub/247ProjectPaulAntuono/DrawingExample/DrawingExample/DrawingExample/Content/TieAdvanced.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File>Font.spritefont</File>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

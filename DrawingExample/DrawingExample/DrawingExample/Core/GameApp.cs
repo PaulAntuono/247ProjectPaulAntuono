@@ -36,7 +36,7 @@ namespace DrawingExample
         /// </summary>
         public Color clearColor = Color.Black;
 
-        public List<BaseGameObject> InGameList;
+        public List<BaseGameObject> SceneList;
         public List<BaseGameObject> DestroyObjectList;
 
         public GameApp()
@@ -46,7 +46,7 @@ namespace DrawingExample
 
             Content.RootDirectory = "Content";
 
-            InGameList = new List<BaseGameObject>();
+            SceneList = new List<BaseGameObject>();
             DestroyObjectList = new List<BaseGameObject>();
         }
 
@@ -116,9 +116,9 @@ namespace DrawingExample
             GameUpdate(gameTime);
 
             // Update All Objects
-            if (InGameList.Count > 0)
+            if (SceneList.Count > 0)
             {
-                foreach (BaseGameObject go in InGameList)
+                foreach (BaseGameObject go in SceneList)
                 {
                     go.ObjectUpdate(gameTime);
                 }
@@ -129,7 +129,7 @@ namespace DrawingExample
             {
                 foreach (BaseGameObject go in DestroyObjectList)
                 {
-                    InGameList.Remove(go);
+                    SceneList.Remove(go);
                 }
                 DestroyObjectList.Clear();
             }
@@ -156,7 +156,7 @@ namespace DrawingExample
             spriteBatch.Begin();
             BackGroundDraw(gameTime);
 
-            foreach (BaseGameObject Obj in InGameList)
+            foreach (BaseGameObject Obj in SceneList)
             {
                 Obj.ObjectDraw(spriteBatch);
             }
@@ -184,7 +184,7 @@ namespace DrawingExample
 
         public void ClearScene()
         {
-            foreach (BaseGameObject Obj in InGameList)
+            foreach (BaseGameObject Obj in SceneList)
             {
                 Obj.Destroy(false);
             }
