@@ -124,8 +124,7 @@ namespace DrawingExample
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void GameDraw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(clearColor);
-
+          
             
 
             //theGrid.Draw(spriteBatch);
@@ -172,7 +171,7 @@ namespace DrawingExample
 
             
 
-            base.Draw(gameTime);
+            
         }
     }
 }
