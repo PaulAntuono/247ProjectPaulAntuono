@@ -122,7 +122,7 @@ namespace DrawingExample
         /// This is called when the game should draw itself.
         /// </summary>
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
-        protected override void Draw(GameTime gameTime)
+        protected override void GameDraw(GameTime gameTime)
         {
             GraphicsDevice.Clear(clearColor);
 
