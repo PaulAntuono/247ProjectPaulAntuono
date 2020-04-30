@@ -105,6 +105,11 @@ namespace DrawingExample
                 Player1.AddRotate(1, gameTime);
             }
 
+            if (IsKeyPressed(Keys.Q))
+            {
+                Player1.Shoot();
+            }
+
 
 
 
@@ -122,7 +127,7 @@ namespace DrawingExample
 
             spriteBatch.DrawString(font, message, new Vector2(200, 200), Color.Red);
 
-            spriteBatch.DrawString(font, newmessage, new Vector2(200, 200), Color.Red);
+            spriteBatch.DrawString(font, newmessage, new Vector2(200, 300), Color.Red);
 
 
 

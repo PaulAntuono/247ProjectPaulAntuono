@@ -26,6 +26,16 @@ namespace DrawingExample
         public BaseGameObject owner;
         public bool IgnoresDamage = false;
         public float Health = 1f;
+        public int ScreenBuffer = 100;
+        public bool hasScreenWrap = true;
+        public float RotationInDegrees
+        {
+
+            get
+            {
+                return MathHelper.ToDegrees(Rotation);
+            }
+        }
 
 
 
@@ -52,6 +62,10 @@ namespace DrawingExample
 
                 float gT = (float)gameTime.ElapsedGameTime.TotalSeconds;
                 Position += Velocity * gT;
+                if (hasScreenWrap)
+                {
+                    ScreenWrap();
+                }
 
                 if (sprite != null)
                 {
@@ -59,6 +73,30 @@ namespace DrawingExample
                 }
 
                 Update(gameTime);
+            }
+        }
+
+        public virtual void ScreenWrap()
+        {
+            if (Position.X > (GameApp.instance.graphics.PreferredBackBufferWidth + ScreenBuffer)) //right side
+            {
+                Position.X = -ScreenBuffer;
+            }
+
+            if (Position.X < (-ScreenBuffer)) //left side
+            {
+                Position.X = (GameApp.instance.graphics.PreferredBackBufferWidth + ScreenBuffer);
+            }
+
+
+            if (Position.Y > (GameApp.instance.graphics.PreferredBackBufferHeight + ScreenBuffer)) // bottom side
+            {
+                Position.Y = -ScreenBuffer;
+            }
+
+            if (Position.Y < (-ScreenBuffer)) // top side
+            {
+                Position.Y = (GameApp.instance.graphics.PreferredBackBufferHeight + ScreenBuffer); 
             }
         }
         public virtual bool TakeDamage(float Value)

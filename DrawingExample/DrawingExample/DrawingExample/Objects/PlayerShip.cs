@@ -9,49 +9,54 @@ namespace DrawingExample
 { 
    public class PlayerShip : BaseGameObject
     {
-        public float ThrustValue = 5;
-        public int ScreenBuffer = 100;
-        public float RotationRate = 20;
+        public float ThrustValue = 3;
+        public float RotationRate = 45;
         public override void InitalizeObject()
         {
-         HasMaxiumVelocity = true;
-         MaxiumVelocity = 100;
-         sprite = new Sprite("Tie");
+            HasMaxiumVelocity = true;
+            MaxiumVelocity = 100;
+            sprite = new Sprite("Tie");
+
+            sprite.scale = 0.5f;
+
+            sprite.origin.X = (sprite.texture.Width / 2);
+            sprite.origin.Y = (sprite.texture.Height / 2);
+
+            Collison = new Rectangle(0, 0, (int)(sprite.texture.Width * sprite.scale), (int)(sprite.texture.Height * sprite.scale));
+
+            //Random r = new Random();
+            //r.NextDouble
         }
+
 
         public override void Update(GameTime gameTime)
         {
             //GameApp.instance.graphics.PreferredBackBufferWidth;
             // GameApp.instance.graphics.PreferredBackBufferHeight;
 
-            if (Position.X > (GameApp.instance.graphics.PreferredBackBufferWidth + ScreenBuffer))
-            {
-                Position.X = -ScreenBuffer;
-            }
-
-            if (Position.X < (-ScreenBuffer))
-            {
-                Position.X = (GameApp.instance.graphics.PreferredBackBufferWidth + ScreenBuffer);
-            }
-
-
-            if (Position.Y > (GameApp.instance.graphics.PreferredBackBufferHeight + ScreenBuffer))
-            {
-                Position.Y = -ScreenBuffer;
-            }
-
-            if (Position.Y < (-ScreenBuffer))
-            {
-                Position.Y = (GameApp.instance.graphics.PreferredBackBufferHeight + ScreenBuffer);
-            }
-
-
-
         }
 
         public virtual void Thrust()
         {
-           Velocity += LinePrimatives.AngleToV2(Rotation, ThrustValue);
+           Vector2 newThrust = LinePrimatives.AngleToV2(RotationInDegrees, ThrustValue);
+            Velocity += newThrust;
+            Console.WriteLine(Rotation + " " + ThrustValue + " " + newThrust);
+        }
+
+        public virtual void Shoot()
+        {
+            Arrow a = new Arrow(); // test example -- will change -- Create Projectile Here
+
+            // Set up Projectile Properties Here
+
+            // Set Position
+            // Set Rotation
+            // Set Velocity
+
+           // a.position = Position; 
+
+
+
         }
 
         public virtual void AddRotate(float value, GameTime gameTime)
