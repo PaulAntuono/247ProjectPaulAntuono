@@ -7,6 +7,11 @@
     <File>C:/Users/Paul/Documents/GitHub/247ProjectPaulAntuono/DrawingExample/DrawingExample/DrawingExample/Content/Enterprise.png</File>
     <File>C:/Users/Paul/Documents/GitHub/247ProjectPaulAntuono/DrawingExample/DrawingExample/DrawingExample/Content/File.spritefont</File>
     <File>C:/Users/Paul/Documents/GitHub/247ProjectPaulAntuono/DrawingExample/DrawingExample/DrawingExample/Content/MFalcon.png</File>
+    <File>C:/Users/Paul/Documents/GitHub/247ProjectPaulAntuono/DrawingExample/DrawingExample/DrawingExample/Content/NewAsteroid1.png</File>
+    <File>C:/Users/Paul/Documents/GitHub/247ProjectPaulAntuono/DrawingExample/DrawingExample/DrawingExample/Content/NewAsteroid2.png</File>
+    <File>C:/Users/Paul/Documents/GitHub/247ProjectPaulAntuono/DrawingExample/DrawingExample/DrawingExample/Content/NewAsteroid3.png</File>
+    <File>C:/Users/Paul/Documents/GitHub/247ProjectPaulAntuono/DrawingExample/DrawingExample/DrawingExample/Content/Newspaceship.png</File>
+    <File>C:/Users/Paul/Documents/GitHub/247ProjectPaulAntuono/DrawingExample/DrawingExample/DrawingExample/Content/Newspaceshot.png</File>
     <File>C:/Users/Paul/Documents/GitHub/247ProjectPaulAntuono/DrawingExample/DrawingExample/DrawingExample/Content/spacemissilepng.png</File>
     <File>C:/Users/Paul/Documents/GitHub/247ProjectPaulAntuono/DrawingExample/DrawingExample/DrawingExample/Content/spaceshippng.png</File>
     <File>C:/Users/Paul/Documents/GitHub/247ProjectPaulAntuono/DrawingExample/DrawingExample/DrawingExample/Content/Tie.png</File>
@@ -15,6 +20,11 @@
   <DestFiles>
     <File xsi:nil="true" />
     <File>Font.spritefont</File>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

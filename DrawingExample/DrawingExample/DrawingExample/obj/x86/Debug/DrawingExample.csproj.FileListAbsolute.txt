@@ -109,3 +109,8 @@ C:\Users\Paul\Documents\GitHub\247ProjectPaulAntuono\DrawingExample\DrawingExamp
 C:\Users\Paul\Documents\GitHub\247ProjectPaulAntuono\DrawingExample\DrawingExample\DrawingExample\bin\Windows\x86\Debug\Content\Font.xnb
 C:\Users\Paul\Documents\GitHub\247ProjectPaulAntuono\DrawingExample\DrawingExample\DrawingExample\bin\Windows\x86\Debug\Content\spacemissilepng.xnb
 C:\Users\Paul\Documents\GitHub\247ProjectPaulAntuono\DrawingExample\DrawingExample\DrawingExample\bin\Windows\x86\Debug\Content\spaceshippng.xnb
+C:\Users\Paul\Documents\GitHub\247ProjectPaulAntuono\DrawingExample\DrawingExample\DrawingExample\bin\Windows\x86\Debug\Content\NewAsteroid1.xnb
+C:\Users\Paul\Documents\GitHub\247ProjectPaulAntuono\DrawingExample\DrawingExample\DrawingExample\bin\Windows\x86\Debug\Content\NewAsteroid2.xnb
+C:\Users\Paul\Documents\GitHub\247ProjectPaulAntuono\DrawingExample\DrawingExample\DrawingExample\bin\Windows\x86\Debug\Content\NewAsteroid3.xnb
+C:\Users\Paul\Documents\GitHub\247ProjectPaulAntuono\DrawingExample\DrawingExample\DrawingExample\bin\Windows\x86\Debug\Content\Newspaceship.xnb
+C:\Users\Paul\Documents\GitHub\247ProjectPaulAntuono\DrawingExample\DrawingExample\DrawingExample\bin\Windows\x86\Debug\Content\Newspaceshot.xnb

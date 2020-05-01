@@ -10,6 +10,11 @@ namespace DrawingExample
     class GameMode : GameApp
     {
         PlayerShip Player1;
+        SmallAsteroid a1;
+        Asteroid a2;
+        LargeAsteroid a3;
+        Torpedo t1;
+
         SpriteFont font; 
 
         float offset = 0;
@@ -52,6 +57,17 @@ namespace DrawingExample
             Player1 = new PlayerShip();
             Player1.Position = new Vector2(300, 300);
 
+            t1 = new Torpedo();
+            t1.Position = new Vector2(400, 400);
+
+            a1 = new SmallAsteroid();
+            a1.Position = new Vector2(200, 200);
+
+            a2 = new Asteroid();
+            a2.Position = new Vector2(150, 150);
+
+            a3 = new LargeAsteroid();
+            a3.Position = new Vector2(100, 100);
         }
 
         /// <summary>
