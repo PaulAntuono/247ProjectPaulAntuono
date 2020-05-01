@@ -45,7 +45,7 @@ namespace DrawingExample
 
         public virtual void Shoot()
         {
-            Arrow a = new Arrow(); // test example -- will change -- Create Projectile Here
+            Torpedo torp = new Torpedo(); // test example -- will change -- Create Projectile Here
 
             // Set up Projectile Properties Here
 
