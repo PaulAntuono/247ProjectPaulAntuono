@@ -18,7 +18,6 @@ namespace DrawingExample
             sprite = new Sprite("Newspaceship");
 
             sprite.scale = 0.15f;
-
             sprite.origin.X = (sprite.texture.Width / 2);
             sprite.origin.Y = (sprite.texture.Height / 2);
 

@@ -31,8 +31,37 @@ namespace DrawingExample
 
         public override void Update(GameTime gameTime)
         {
+
             //GameApp.instance.graphics.PreferredBackBufferWidth;
             // GameApp.instance.graphics.PreferredBackBufferHeight;
+
+        }
+
+        public virtual void SpawnAsteroid()
+        {
+            {
+                if (Position.X > (GameApp.instance.graphics.PreferredBackBufferWidth + ScreenBuffer)) //right side
+                {
+                   
+                }
+
+                if (Position.X < (-ScreenBuffer)) //left side
+                {
+                   
+                }
+
+
+                if (Position.Y > (GameApp.instance.graphics.PreferredBackBufferHeight + ScreenBuffer)) // bottom side
+                {
+                    
+                }
+
+                if (Position.Y < (-ScreenBuffer)) // top side
+                {
+                   
+                }
+            }
+
 
         }
         public virtual void AddRotate(float value, GameTime gameTime)
