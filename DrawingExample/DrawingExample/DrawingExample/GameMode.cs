@@ -20,12 +20,6 @@ namespace DrawingExample
         float offset = 0;
         //bool MouseShow = false;
 
-        Line theline;
-
-        Grid2D theGrid;
-
-        XMark xMark; 
-
         /// <summary>
         /// Default Constructor. Most of the work you need to do should be in Initalize
         /// </summary>
@@ -56,9 +50,6 @@ namespace DrawingExample
 
             Player1 = new PlayerShip();
             Player1.Position = new Vector2(300, 300);
-
-            t1 = new Torpedo();
-            t1.Position = new Vector2(400, 400);
 
             a1 = new SmallAsteroid();
             a1.Position = new Vector2(200, 200);

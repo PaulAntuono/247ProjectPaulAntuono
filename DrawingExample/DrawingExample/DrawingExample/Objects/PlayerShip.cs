@@ -49,13 +49,11 @@ namespace DrawingExample
 
             // Set up Projectile Properties Here
 
-            // Set Position
-            // Set Rotation
-            // Set Velocity
+            torp.Position = Position;
 
-           // a.position = Position; 
+            torp.Rotation = Rotation;
 
-
+            torp.Thrust();
 
         }
 

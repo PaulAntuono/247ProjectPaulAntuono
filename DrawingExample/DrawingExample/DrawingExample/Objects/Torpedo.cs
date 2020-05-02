@@ -9,7 +9,7 @@ namespace DrawingExample
 {
     public class Torpedo : BaseGameObject
     {
-        public float ThrustValue = 3;
+        public float ThrustValue = 100;
         public float RotationRate = 45;
         public override void InitalizeObject()
         {
@@ -17,7 +17,7 @@ namespace DrawingExample
             //MaxiumVelocity = 100;
             sprite = new Sprite("Newspaceshot");
 
-            sprite.scale = 0.10f;
+            sprite.scale = 0.05f;
 
             sprite.origin.X = (sprite.texture.Width / 2);
             sprite.origin.Y = (sprite.texture.Height / 2);
@@ -34,6 +34,13 @@ namespace DrawingExample
             //GameApp.instance.graphics.PreferredBackBufferWidth;
             // GameApp.instance.graphics.PreferredBackBufferHeight;
 
+        }
+
+        public virtual void Thrust()
+        {
+            Vector2 newThrust = LinePrimatives.AngleToV2(RotationInDegrees, ThrustValue);
+            Velocity += newThrust;
+            Console.WriteLine(Rotation + " " + ThrustValue + " " + newThrust);
         }
         public virtual void AddRotate(float value, GameTime gameTime)
         {
