@@ -15,6 +15,7 @@ namespace DrawingExample
         {
             //HasMaxiumVelocity = true;
             //MaxiumVelocity = 100;
+            hasScreenWrap = false;
             sprite = new Sprite("Newspaceshot");
 
             sprite.scale = 0.05f;
