@@ -51,14 +51,14 @@ namespace DrawingExample
             Player1 = new PlayerShip();
             Player1.Position = new Vector2(300, 300);
 
-            a1 = new SmallAsteroid();
-            a1.Position = new Vector2(200, 200);
+          //  a1 = new SmallAsteroid();
+           // a1.Position = new Vector2(200, 200);
 
-            a2 = new Asteroid();
-            a2.Position = new Vector2(150, 150);
+           // a2 = new Asteroid();
+           // a2.Position = new Vector2(150, 150);
 
             a3 = new LargeAsteroid();
-            a3.Position = new Vector2(100, 100);
+           // a3.Position = new Vector2(100, 100);
         }
 
         /// <summary>

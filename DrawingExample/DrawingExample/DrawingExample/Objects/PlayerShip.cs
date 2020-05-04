@@ -39,7 +39,6 @@ namespace DrawingExample
         {
            Vector2 newThrust = LinePrimatives.AngleToV2(RotationInDegrees, ThrustValue);
             Velocity += newThrust;
-            Console.WriteLine(Rotation + " " + ThrustValue + " " + newThrust);
         }
 
         public virtual void Shoot()

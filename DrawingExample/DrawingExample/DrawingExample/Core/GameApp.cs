@@ -38,16 +38,20 @@ namespace DrawingExample
 
         public List<BaseGameObject> SceneList;
         public List<BaseGameObject> DestroyObjectList;
+        public List<BaseGameObject> AddObjectList;
 
+        public Random random;
         public GameApp()
         {
             instance = this;
+            random = new Random();
             graphics = new GraphicsDeviceManager(this);
 
             Content.RootDirectory = "Content";
 
             SceneList = new List<BaseGameObject>();
             DestroyObjectList = new List<BaseGameObject>();
+            AddObjectList = new List<BaseGameObject>();
         }
 
         /// <summary>
@@ -132,6 +136,15 @@ namespace DrawingExample
                     SceneList.Remove(go);
                 }
                 DestroyObjectList.Clear();
+            }
+
+            if (AddObjectList.Count > 0)
+            {
+                foreach (BaseGameObject go in AddObjectList)
+                {
+                    SceneList.Add(go);
+                }
+                AddObjectList.Clear();
             }
 
 

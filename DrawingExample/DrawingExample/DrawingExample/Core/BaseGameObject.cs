@@ -41,7 +41,7 @@ namespace DrawingExample
 
         public BaseGameObject()
         {
-            GameApp.instance.SceneList.Add(this);
+            GameApp.instance.AddObjectList.Add(this);
 
             InitalizeObject();
         }
@@ -157,10 +157,12 @@ namespace DrawingExample
 
         public void Destroy(bool CallOnDestroy = true)
         {
+
             if (CallOnDestroy)
             {
                 OnDestroy();
             }
+
             GameApp.instance.DestroyObjectList.Add(this);
         }
 

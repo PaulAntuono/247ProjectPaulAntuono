@@ -9,7 +9,7 @@ namespace DrawingExample
 {
     public class Asteroid : BaseGameObject
     {
-        public float ThrustValue = 3;
+        public float AsteroidSpeed = 45;
         public float RotationRate = 45;
         public override void InitalizeObject()
         {
